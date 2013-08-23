@@ -4,7 +4,7 @@ php-pandora-api
 <strong>Unofficial</strong> PHP API Client for Pandora (experimental)
 ____
 
-The XMLRPC endpoint calls are currently broken.
+The XMLRPC endpoint calls are currently broken. (JSON calls work fine)
 
 I'll remove all dependencies soon.
 

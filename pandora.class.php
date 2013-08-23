@@ -4,26 +4,6 @@
  *
  * XMLRPC calls are broken - will fix.
  *
- * Sample Usage:
- *
-  require_once('blowfish.php');
-  require_once('pandora.class.php');
-  $p = new \Pandora('android', 'json');
-  if(!$p->login('**@gmail.com', '**'))
-  {
-    die(sprintf("Error: %s\nReq: %s\n Resp: %s", $p->last_error, $p->last_request_data, $p->last_response_data));
-  }
-  if(!$response = $pandora->makeRequest('user.getExtendedProfileInfo'))
-  {
-    die(sprintf("Error: %s\nReq: %s\n Resp: %s", $p->last_error, $p->last_request_data, $p->last_response_data));
-  }
-  print_r($response);
- *
- *
- * Requirements:
- *   php_openssl
- *   php_xmlrpc
- *
  * @author Alex Dallaway <github:adallaway>
  * @see http://pan-do-ra-api.wikia.com/
  */

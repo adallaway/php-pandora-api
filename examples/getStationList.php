@@ -1,6 +1,6 @@
 <?php
 
-require_once 'src/php_pandora_api/Pandora.php';
+require_once '../src/php_pandora_api/Pandora.php';
 
 use php_pandora_api\Pandora;
 

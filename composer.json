@@ -1,5 +1,5 @@
 {
-    "name": "jhill/php_pandora_api",
+    "name": "php_pandora_api/php_pandora_api",
     "description": "Unofficial PHP client for the Pandora JSON API",
     "keywords": ["pandora", "php", "api"],
     "type": "library",

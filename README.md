@@ -20,7 +20,6 @@ Example Usage
 ----
 
 ```php
-require_once('blowfish.class.php');
 require_once('pandora.class.php');
 
 $p = new \Pandora('android', 'json');

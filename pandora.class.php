@@ -147,7 +147,7 @@ class Pandora
     $this->last_request_data = $json_data;
 
     if($encrypted)
-      $json_data = bin2hex(Blowfish::encrypt($json_data, $this->_encryption_cipher, Blowfish::BLOWFISH_MODE_EBC));
+      $json_data = bin2hex(mcrypt_encrypt(MCRYPT_BLOWFISH, $this->_encryption_cipher, $json_data, MCRYPT_MODE_ECB));
 
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, $url);
@@ -184,7 +184,7 @@ class Pandora
     $this->last_request_data = htmlspecialchars($xmlrpc_request);
 
     if($encrypted)
-      $xmlrpc_request = bin2hex(Blowfish::encrypt($xmlrpc_request, $this->_encryption_cipher, Blowfish::BLOWFISH_MODE_EBC));
+      $xmlrpc_request = bin2hex(mcrypt_encrypt(MCRYPT_BLOWFISH, $this->_encryption_cipher, $xmlrpc_request, MCRYPT_MODE_ECB));
 
 
     $context = stream_context_create(array($protocol => array
@@ -221,7 +221,7 @@ class Pandora
   private function decryptSyncTime($sync_time_encypted)
   {
     $sync_time_encypted = hex2bin($sync_time_encypted);
-    $sync_time_decypted = Blowfish::decrypt($sync_time_encypted, $this->_decryption_cipher, Blowfish::BLOWFISH_MODE_EBC);
+    $sync_time_decypted = mcrypt_decrypt(MCRYPT_BLOWFISH, $this->_decryption_cipher, $sync_time_encypted, MCRYPT_MODE_ECB);
     return intval(substr($sync_time_decypted, 4));
   }
 

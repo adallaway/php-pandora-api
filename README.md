@@ -6,8 +6,6 @@ ____
 
 The XMLRPC endpoint calls are currently broken. (JSON calls work fine)
 
-I'll remove all dependencies soon.
-
 Current Dependencies:
 - php_openssl
 - php_mcrypt

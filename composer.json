@@ -1,0 +1,26 @@
+{
+    "name": "php_pandora_api/php_pandora_api",
+    "description": "Unofficial PHP client for the Pandora JSON API",
+    "keywords": ["pandora", "php", "api"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+    	{
+    		"name": "Alex Dallaway"
+    	},
+        {
+            "name": "Jonathon Hill",
+            "email": "jhill9693@gmail.com"
+        }
+    ],
+    "require": {
+    	"php": ">=5.3.2",
+    	"ext-mcrypt": "*",
+    	"ext-openssl": "*"
+    },
+    "autoload": {
+    	"psr-0": {
+    		"php_pandora_api\\": "src/"
+    	}
+    }
+}

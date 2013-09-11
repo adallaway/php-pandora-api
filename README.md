@@ -1,39 +1,37 @@
-php-pandora-api
-===============
+# php_pandora_api
 
-<strong>Unofficial</strong> PHP API Client for Pandora (experimental)
-____
-
-The XMLRPC endpoint calls are currently broken. (JSON calls work fine)
+*Unofficial* PHP API Client for Pandora (experimental)
 
 Current Dependencies:
-- php_openssl
-- php_mcrypt
-- php_xmlrpc
+
+* php_openssl
+* php_mcrypt
 
 Thanks to contributors of http://pan-do-ra-api.wikia.com/wiki/Pan-do-ra_API_Wiki for reverse engineering.
-____
 
-Example Usage
-----
+## Example Usage
 
 ```php
-require_once('pandora.class.php');
+require_once 'src/php_pandora_api/Pandora.php';
 
-$p = new \Pandora('android', 'json');
+use php_pandora_api\Pandora;
 
-if(!$p->login('username', 'password'))
-{
-  die(sprintf("Error: %s\nReq: %s\n Resp: %s", $p->last_error, $p->last_request_data, $p->last_response_data));
+$p = new Pandora('android', 'json');
+
+if( !$p->login('username', 'password')) {
+    die(sprintf("Error: %s\nReq: %s\n Resp: %s", $p->last_error, $p->last_request_data, $p->last_response_data));
 }
 
-if(!$response = $p->makeRequest('user.getStationList'))
-{
-  die(sprintf("Error: %s\nReq: %s\n Resp: %s", $p->last_error, $p->last_request_data, $p->last_response_data));
+if( !$response = $p->makeRequest('user.getStationList')) {
+    die(sprintf("Error: %s\nReq: %s\n Resp: %s", $p->last_error, $p->last_request_data, $p->last_response_data));
 }
 
+echo '<pre>';
 print_r($response);
+echo '</pre>';
 ```
+
+## API Method Reference
 
 | makeRequest() Methods            | Params
 | -------------------------------- | ----------------------------------------
@@ -64,3 +62,5 @@ print_r($response);
 | user.getStationListChecksum      | -none-
 | user.setQuickMix                 | (array)quickMixStationIds
 | user.sleepSong                   | (string)trackToken
+
+For a full, up-to-date listing see http://pan-do-ra-api.wikia.com/wiki/Pan-do-ra_API_Wiki.

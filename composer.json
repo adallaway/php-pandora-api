@@ -1,0 +1,23 @@
+{
+    "name": "jhill/php_pandora_api",
+    "type": "library",
+    "authors": [
+    	{
+    		"name": "Alex Dallaway"
+    	},
+        {
+            "name": "Jonathon Hill",
+            "email": "jhill9693@gmail.com"
+        }
+    ],
+    "require": {
+    	"php": ">=5.3.2",
+    	"ext-mcrypt": "*",
+    	"ext-openssl": "*"
+    },
+    "autoload": {
+    	"psr-0": {
+    		"php_pandora_api\\": "src/"
+    	}
+    }
+}

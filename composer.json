@@ -1,6 +1,9 @@
 {
     "name": "jhill/php_pandora_api",
+    "description": "Unofficial PHP client for the Pandora JSON API",
+    "keywords": ["pandora", "php", "api"],
     "type": "library",
+    "license": "MIT",
     "authors": [
     	{
     		"name": "Alex Dallaway"

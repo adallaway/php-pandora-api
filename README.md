@@ -6,11 +6,9 @@ ____
 
 The XMLRPC endpoint calls are currently broken. (JSON calls work fine)
 
-I'll remove all dependencies soon.
-
 Current Dependencies:
-- blowfish.class.php
 - php_openssl
+- php_mcrypt
 - php_xmlrpc
 
 Thanks to contributors of http://pan-do-ra-api.wikia.com/wiki/Pan-do-ra_API_Wiki for reverse engineering.
@@ -20,7 +18,6 @@ Example Usage
 ----
 
 ```php
-require_once('blowfish.class.php');
 require_once('pandora.class.php');
 
 $p = new \Pandora('android', 'json');

@@ -44,7 +44,7 @@ class Pandora
             'windowsgadget' => array('EVCCIBGS9AOJTSYMNNFUML07VLH8JYP0', 'WG01', 'E#IO$MYZOAB%FVR2', '%22CML*ZU$8YXP[1', true),
         );
 
-        if (isset($available_partners[$partner_username])) {
+        if (!isset($available_partners[$partner_username])) {
             $partner_username = 'android';
         }
 
